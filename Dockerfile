@@ -15,7 +15,7 @@ RUN mix local.hex --force && \
 ENV MIX_ENV=prod
 
 # set DATABASE_URL ENV
-ENV DATABASE_URL=ecto://postgres:postgres@10.128.0.3/hello_dev
+ENV DATABASE_URL=ecto://postgres:postgres@10.128.0.7/hello_dev
 
 # set SECRET_KEY_BASE ENV
 ENV SECRET_KEY_BASE=VB+XSWMk5FvJVcXZIhJ0JFiN0R+E+2AxjIbx9NowOazugoqfKnqib47dmXD88cB+
