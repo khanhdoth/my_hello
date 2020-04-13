@@ -3,7 +3,7 @@ echo "Build My Hello container"
 
 echo "Current user is:"
 whoami
-cd /home/host/dev/my_hello
+cd /home/host/dev/git/my_hello
 
 # delete running container
 docker rm -f my-running-hello
