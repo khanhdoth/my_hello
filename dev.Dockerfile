@@ -23,19 +23,3 @@ ENV SECRET_KEY_BASE=VB+XSWMk5FvJVcXZIhJ0JFiN0R+E+2AxjIbx9NowOazugoqfKnqib47dmXD8
 # set PORT ENV
 ENV HTTP_PORT=4000
 ENV HTTPS_PORT=4001
-
-# install mix dependencies
-COPY mix.exs mix.lock ./
-COPY config config
-RUN mix deps.get
-RUN mix deps.compile
-
-# build assets
-COPY assets assets
-COPY priv priv
-RUN cd assets && npm install && npm run deploy
-RUN mix phx.digest
-
-# build project
-COPY lib lib
-RUN mix compile
