@@ -9,7 +9,7 @@ cd /home/host/dev/git/my_hello
 docker rm -f my-running-hello
 
 # delete image
-docker image rm my-hello:lates
+docker image rm my-hello:latest
 
 # build new image
 docker build -t my-hello:latest .
