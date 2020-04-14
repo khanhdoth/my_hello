@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd /home/dev/git/my_hello
 mix deps.get
 mix deps.compile
