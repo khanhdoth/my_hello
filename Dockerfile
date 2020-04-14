@@ -21,7 +21,7 @@ ENV DATABASE_URL=ecto://postgres:postgres@10.128.0.7/hello_dev
 ENV SECRET_KEY_BASE=VB+XSWMk5FvJVcXZIhJ0JFiN0R+E+2AxjIbx9NowOazugoqfKnqib47dmXD88cB+
 
 # set PORT ENV
-ENV PORT=4001
+# ENV PORT=4001
 
 # install mix dependencies
 COPY mix.exs mix.lock ./
