@@ -15,5 +15,5 @@ docker image rm my-hello:latest
 docker build -t my-hello:latest .
 
 # create new container based on new image test 10
-docker run -dit --name my-running-hello -p 4000:4000 my-hello
-docker exec -dit my-running-hello bin/r01 start
+docker run -dit --name my-running-hello -p 5000:5000 -p 5001:5001 my-hello
+docker exec -dit my-running-hello bin/master start

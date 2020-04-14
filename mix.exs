@@ -12,7 +12,7 @@ defmodule Hello.MixProject do
       aliases: aliases(),
       deps: deps(),
       releases: [
-        r01: [
+        master: [
           include_executables_for: [:unix],
           applications: [runtime_tools: :permanent]
         ]
