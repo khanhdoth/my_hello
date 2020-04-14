@@ -3,10 +3,6 @@ FROM elixir:1.9.0-alpine
 # install build dependencies
 RUN apk add --update git build-base nodejs yarn python npm
 
-# install hex + rebar
-RUN mix local.hex --force && \
-    mix local.rebar --force
-
 # set build ENV
 ENV MIX_ENV=dev
 

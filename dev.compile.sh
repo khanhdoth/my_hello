@@ -1,10 +1,9 @@
 #!/bin/bash
-mix deps.get
-mix deps.compile
-mix compile
-mix phx.server
-
 cd /home/host/dev/git/my_hello
+
+# install hex + rebar
+mix local.hex --force && \
+    mix local.rebar --force
 
 # install mix dependencies
 mix deps.get
@@ -20,4 +19,4 @@ mix phx.digest
 mix compile
 
 # start server
-mix phx.start
+. mix phx.server
