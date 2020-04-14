@@ -50,7 +50,7 @@ RUN apk add --update bash openssl
 RUN mkdir /app
 WORKDIR /app
 
-COPY --from=build /app/_build/prod/rel/hello ./
+COPY --from=build /app/_build/prod/rel ./
 RUN chown -R nobody: /app
 USER nobody
 
