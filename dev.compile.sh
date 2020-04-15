@@ -19,4 +19,4 @@ mix phx.digest
 mix compile
 
 # start server
-. mix phx.server
+mix phx.server
