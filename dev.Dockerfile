@@ -1,4 +1,4 @@
-FROM elixir:1.9.0-alpine
+FROM postgres
 
 # install build dependencies
 RUN apk add --update git build-base nodejs yarn python npm
