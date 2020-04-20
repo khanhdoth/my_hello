@@ -1,11 +1,15 @@
 use Mix.Config
 
+database_url =
+  System.get_env("DATABASE_URL") ||
+    raise """
+    environment variable DATABASE_URL is missing.
+    For example: ecto://USER:PASS@HOST/DATABASE
+    """
+
 # Configure your database
 config :hello, Hello.Repo,
-  username: "postgres",
-  password: "postgres",
-  database: "hello_dev",
-  hostname: "localhost",
+  url: database_url,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
