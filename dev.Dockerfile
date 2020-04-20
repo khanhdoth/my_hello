@@ -1,7 +1,7 @@
 FROM elixir:1.9.0-alpine
 
 # install build dependencies
-RUN apk add --update git build-base nodejs yarn python npm
+RUN apk add --update git build-base nodejs yarn python npm inotify-tools
 
 # set build ENV
 ENV MIX_ENV=dev
