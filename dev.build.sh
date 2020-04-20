@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Build My Hello production container"
+echo "Build My Hello dev container"
 
 echo "Current user is:"
 whoami
