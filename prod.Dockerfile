@@ -33,7 +33,8 @@ RUN mix deps.compile
 # build assets
 COPY assets assets
 COPY priv priv
-RUN cd assets && npm install && npm run deploy
+# RUN cd assets && npm install && npm run deploy
+RUN cd assets && npm install && node node_modules/webpack/bin/webpack.js
 RUN mix phx.digest
 
 # build project
