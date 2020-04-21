@@ -21,8 +21,30 @@
   <article class="column">
     <h2>Help</h2>
     <ul>
+      <% collection = %{"List" => ["Item1", "Item2", "Item3"]} %>
+        <%= for {key, list} <- collection do %>
+          <%= for item <- list do %>
+            <li><%= item %> # Item </li>
+          <% end %>
+        <% end %>
+    </ul>  
+  </article>
+  <article class="column">
+    <h2>Help 2</h2>
+    <ul>
+      <% collection = %{"List" => Enum.to_list(1..123)} %>
+        <%= for {key, list} <- collection do %>
+          <%= for item <- list do %>
+            <li>Item <%= item %></li>
+          <% end %>
+        <% end %>
+    </ul>  
+  </article>
+  <article class="column">
+    <h2>Help 3</h2>
+    <ul>
       <li>
-        <a href="https://elixirforum.com/c/phoenix-forum">Forum</a>
+        <a href="https://elixirforum.com/c/phoenix-forum">Forum 2</a>
       </li>
       <li>
         <a href="https://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on Freenode IRC</a>
@@ -31,5 +53,5 @@
         <a href="https://twitter.com/elixirphoenix">Twitter @elixirphoenix</a>
       </li>
     </ul>
-  </article>
+  </article>  
 </section>
